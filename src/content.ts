@@ -12,6 +12,13 @@ export const creator = {
   instagram: 'https://www.instagram.com/songnotfoundd/',
 }
 
+// Social links shown in the contact section. Add, remove or reorder freely.
+export const socials = [
+  { label: 'Instagram', handle: '@songnotfoundd', note: 'tech and UGC', url: 'https://www.instagram.com/songnotfoundd/' },
+  { label: 'TikTok', handle: '@songnotfoundd', note: 'tech and UGC', url: 'https://www.tiktok.com/@songnotfoundd' },
+  { label: 'Instagram', handle: '@im2basic', note: 'travel', url: 'https://www.instagram.com/im2basic/' },
+]
+
 export const hero = {
   headline: 'I help tech & lifestyle brands sell with short-form content that stops the scroll.',
   // Keep this to two or three short lines. This is the whole "about me".

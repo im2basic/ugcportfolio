@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import { AsciiPhoto } from './AsciiPhoto'
 import { KoiPond } from './KoiPond'
-import { brands, contact, creator, hero, partnership, services, showEmptySlots, steps, testimonials, videos } from './content'
+import { brands, contact, creator, hero, partnership, services, showEmptySlots, socials, steps, testimonials, videos } from './content'
 import type { Video } from './content'
 
 // Adds .is-in to every [data-reveal] element the first time it scrolls into view.
@@ -279,6 +279,20 @@ export default function App() {
               <a className="button" href={creator.instagram} target="_blank" rel="noreferrer">
                 @{creator.handle}
               </a>
+            </div>
+            <div className="socials">
+              <h3>See more of my content</h3>
+              <ul>
+                {socials.map((s) => (
+                  <li key={s.url}>
+                    <a href={s.url} target="_blank" rel="noreferrer">
+                      <span className="socials__label">{s.label}</span>
+                      <b>{s.handle}</b>
+                      <span className="socials__note">{s.note}</span>
+                    </a>
+                  </li>
+                ))}
+              </ul>
             </div>
           </section>
         </main>
