@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
+import { AsciiPhoto } from './AsciiPhoto'
 import { KoiPond } from './KoiPond'
 import { brands, contact, creator, hero, partnership, services, showEmptySlots, steps, testimonials, videos } from './content'
 import type { Video } from './content'
@@ -149,7 +150,7 @@ export default function App() {
         </header>
 
         <main id="top">
-          <section className="hero" aria-labelledby="hero-headline">
+          <section className={`hero${hero.photo ? ' hero--photo' : ''}`} aria-labelledby="hero-headline">
             <p className="hero__title">
               {creator.name} <span aria-hidden="true">~</span> {creator.title}
             </p>
@@ -167,6 +168,12 @@ export default function App() {
                 {hero.secondary}
               </a>
             </div>
+            {hero.photo && (
+              <figure className="hero__photo">
+                <AsciiPhoto src={hero.photo} alt={hero.photoAlt} />
+                {hero.photoCaption && <figcaption>{hero.photoCaption}</figcaption>}
+              </figure>
+            )}
             <p className="hero__hint" aria-hidden="true">
               {'><(((º>'} tap the water to feed the koi
             </p>

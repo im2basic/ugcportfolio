@@ -17,8 +17,12 @@ export const hero = {
   // Keep this to two or three short lines. This is the whole "about me".
   lines: [
     'I’m Anisong. I look at what your content is missing, then I film it.',
-    'Short vertical video, hook first, made to move product. Tech and lifestyle mostly, open to other categories.',
+    'Short vertical video, hook first, made to move product. Tech and lifestyle.',
   ],
+  // Your photo beside the headline. Leave photo as '' to hide it. The caption is optional.
+  photo: '/media/anisong.jpg',
+  photoAlt: 'Anisong smiling at the camera in a lantern-lit alley at night, wearing a cap and glasses',
+  photoCaption: '',
   primary: 'See my work',
   secondary: 'Let’s chat',
 }
@@ -36,7 +40,7 @@ export const hero = {
 // An entry with no video, no poster and no link shows as an empty "coming soon" slot.
 // Set showEmptySlots to false to hide those slots before you send the link to brands.
 
-export const showEmptySlots = true
+export const showEmptySlots = false
 
 export type Video = {
   product: string
