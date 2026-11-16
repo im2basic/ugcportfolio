@@ -168,6 +168,15 @@ export default function App() {
                 {hero.secondary}
               </a>
             </div>
+            <ul className="hero__socials" aria-label="Social media">
+              {socials.map((s) => (
+                <li key={s.url}>
+                  <a href={s.url} target="_blank" rel="noreferrer">
+                    {s.label} <b>{s.handle}</b>
+                  </a>
+                </li>
+              ))}
+            </ul>
             {hero.photo && (
               <figure className="hero__photo">
                 <AsciiPhoto src={hero.photo} alt={hero.photoAlt} />
